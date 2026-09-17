@@ -1,0 +1,26 @@
+
+======================================================================
+TRAINING transformer | config {'d_model': 64, 'seq_len': 48, 'max_len': 128, 'lr': 0.0015, 'epochs': 25, 'batch_size': 32, 'num_batches_per_epoch': 180, 'weight_decay': 0.01} | kwargs {'d_model': 64, 'n_layers': 2}
+======================================================================
+Params: 77312
+Traceback (most recent call last):
+  File "/home/user/AreanaTestPiolot/train_harder.py", line 290, in <module>
+    run_harder()
+  File "/home/user/AreanaTestPiolot/train_harder.py", line 218, in run_harder
+    results["transformer_64"] = train_and_eval("transformer", config, {"d_model":64, "n_layers":2})
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/AreanaTestPiolot/train_harder.py", line 48, in train_and_eval
+    val_inp, val_tgt, val_mask = generate_batch(400, seq_len=val_seq_len, harder=True)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/AreanaTestPiolot/src/dataset.py", line 190, in generate_batch
+    inp, tgt, m = generate_harder_mqar_sequence(seq_len=seq_len, num_pairs=6, num_queries=6)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/AreanaTestPiolot/src/dataset.py", line 153, in generate_harder_mqar_sequence
+    return generate_mqar_sequence(seq_len=seq_len, num_pairs=num_pairs, num_queries=num_queries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/AreanaTestPiolot/src/dataset.py", line 93, in generate_mqar_sequence
+    selected_keys = random.sample(keys_avail, num_pairs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/random.py", line 456, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative

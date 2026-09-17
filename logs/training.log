@@ -1,0 +1,14 @@
+Config: {'d_model': 64, 'n_layers': 2, 'batch_size': 32, 'seq_len': 32, 'max_len': 64, 'lr': 0.0015, 'epochs': 30, 'num_batches_per_epoch': 200, 'weight_decay': 0.01}
+
+============================================================
+TRAINING TRANSFORMER - config {'d_model': 64, 'n_layers': 2, 'batch_size': 32, 'seq_len': 32, 'max_len': 64, 'lr': 0.0015, 'epochs': 30, 'num_batches_per_epoch': 200, 'weight_decay': 0.01}
+============================================================
+Model transformer params: 73216
+Initial memory: 654.9 MB
+[Epoch 01/30] train_loss=1.2487 val_loss=1.1341 val_acc=0.388 | long_val_loss=1.1206 long_acc=0.385 | lr=0.00150 mem=742.6MB time=3.6s
+[Epoch 02/30] train_loss=1.1066 val_loss=1.0970 val_acc=0.402 | long_val_loss=1.0976 long_acc=0.396 | lr=0.00148 mem=781.5MB time=3.6s
+[Epoch 03/30] train_loss=1.0776 val_loss=1.0879 val_acc=0.407 | long_val_loss=1.0946 long_acc=0.397 | lr=0.00146 mem=781.4MB time=3.1s
+[Epoch 04/30] train_loss=1.0805 val_loss=1.0800 val_acc=0.409 | long_val_loss=1.0890 long_acc=0.404 | lr=0.00144 mem=781.4MB time=3.4s
+[Epoch 05/30] train_loss=1.0646 val_loss=1.0740 val_acc=0.415 | long_val_loss=1.0859 long_acc=0.401 | lr=0.00140 mem=781.3MB time=3.6s
+[Epoch 06/30] train_loss=1.0481 val_loss=1.0598 val_acc=0.422 | long_val_loss=1.0835 long_acc=0.409 | lr=0.00136 mem=781.4MB time=3.6s
+[Epoch 07/30] train_loss=1.0548 val_loss=1.0504 val_acc=0.432 | long_val_loss=1.0813 long_acc=0.411 | lr=0.00131 mem=781.5MB time=3.6s
