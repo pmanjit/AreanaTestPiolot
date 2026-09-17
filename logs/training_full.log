@@ -1,0 +1,140 @@
+Config: {'d_model': 64, 'n_layers': 2, 'batch_size': 32, 'seq_len': 32, 'max_len': 64, 'lr': 0.0015, 'epochs': 30, 'num_batches_per_epoch': 200, 'weight_decay': 0.01}
+
+============================================================
+TRAINING TRANSFORMER - config {'d_model': 64, 'n_layers': 2, 'batch_size': 32, 'seq_len': 32, 'max_len': 64, 'lr': 0.0015, 'epochs': 30, 'num_batches_per_epoch': 200, 'weight_decay': 0.01}
+============================================================
+Model transformer params: 73216
+Initial memory: 654.9 MB
+[Epoch 01/30] train_loss=1.2487 val_loss=1.1341 val_acc=0.388 | long_val_loss=1.1206 long_acc=0.385 | lr=0.00150 mem=754.0MB time=3.1s
+[Epoch 02/30] train_loss=1.1066 val_loss=1.0970 val_acc=0.402 | long_val_loss=1.0976 long_acc=0.396 | lr=0.00148 mem=746.3MB time=3.2s
+[Epoch 03/30] train_loss=1.0776 val_loss=1.0879 val_acc=0.407 | long_val_loss=1.0946 long_acc=0.397 | lr=0.00146 mem=738.4MB time=2.9s
+[Epoch 04/30] train_loss=1.0805 val_loss=1.0800 val_acc=0.409 | long_val_loss=1.0890 long_acc=0.404 | lr=0.00144 mem=824.0MB time=2.8s
+[Epoch 05/30] train_loss=1.0646 val_loss=1.0740 val_acc=0.415 | long_val_loss=1.0859 long_acc=0.401 | lr=0.00140 mem=777.4MB time=3.0s
+[Epoch 06/30] train_loss=1.0481 val_loss=1.0598 val_acc=0.422 | long_val_loss=1.0835 long_acc=0.409 | lr=0.00136 mem=808.4MB time=2.9s
+[Epoch 07/30] train_loss=1.0548 val_loss=1.0504 val_acc=0.432 | long_val_loss=1.0813 long_acc=0.411 | lr=0.00131 mem=742.3MB time=2.9s
+[Epoch 08/30] train_loss=1.0492 val_loss=1.0423 val_acc=0.431 | long_val_loss=1.0748 long_acc=0.411 | lr=0.00125 mem=800.8MB time=2.9s
+[Epoch 09/30] train_loss=1.0338 val_loss=1.0413 val_acc=0.432 | long_val_loss=1.0739 long_acc=0.411 | lr=0.00119 mem=824.0MB time=2.8s
+[Epoch 10/30] train_loss=1.0290 val_loss=1.0351 val_acc=0.434 | long_val_loss=1.0707 long_acc=0.415 | lr=0.00113 mem=746.3MB time=3.0s
+[Epoch 11/30] train_loss=1.0283 val_loss=1.0319 val_acc=0.450 | long_val_loss=1.0734 long_acc=0.401 | lr=0.00106 mem=808.7MB time=3.0s
+[Epoch 12/30] train_loss=1.0374 val_loss=1.0270 val_acc=0.438 | long_val_loss=1.0654 long_acc=0.415 | lr=0.00098 mem=839.6MB time=3.0s
+[Epoch 13/30] train_loss=1.0217 val_loss=1.0262 val_acc=0.439 | long_val_loss=1.0661 long_acc=0.412 | lr=0.00091 mem=773.5MB time=3.3s
+[Epoch 14/30] train_loss=1.0119 val_loss=1.0247 val_acc=0.440 | long_val_loss=1.0658 long_acc=0.405 | lr=0.00083 mem=808.4MB time=3.5s
+[Epoch 15/30] train_loss=1.0053 val_loss=1.0235 val_acc=0.440 | long_val_loss=1.0645 long_acc=0.417 | lr=0.00075 mem=746.4MB time=2.9s
+[Epoch 16/30] train_loss=1.0092 val_loss=1.0217 val_acc=0.446 | long_val_loss=1.0636 long_acc=0.417 | lr=0.00067 mem=800.8MB time=2.8s
+[Epoch 17/30] train_loss=0.9990 val_loss=1.0092 val_acc=0.456 | long_val_loss=1.0595 long_acc=0.406 | lr=0.00059 mem=754.0MB time=2.9s
+[Epoch 18/30] train_loss=1.0165 val_loss=1.0058 val_acc=0.458 | long_val_loss=1.0583 long_acc=0.410 | lr=0.00052 mem=839.9MB time=3.1s
+[Epoch 19/30] train_loss=1.0128 val_loss=1.0055 val_acc=0.462 | long_val_loss=1.0565 long_acc=0.413 | lr=0.00044 mem=746.3MB time=2.9s
+[Epoch 20/30] train_loss=1.0141 val_loss=1.0024 val_acc=0.460 | long_val_loss=1.0536 long_acc=0.408 | lr=0.00038 mem=808.6MB time=3.1s
+[Epoch 21/30] train_loss=0.9916 val_loss=1.0018 val_acc=0.461 | long_val_loss=1.0537 long_acc=0.413 | lr=0.00031 mem=816.3MB time=3.1s
+[Epoch 22/30] train_loss=1.0048 val_loss=1.0003 val_acc=0.461 | long_val_loss=1.0541 long_acc=0.412 | lr=0.00025 mem=769.6MB time=3.1s
+[Epoch 23/30] train_loss=0.9955 val_loss=0.9996 val_acc=0.452 | long_val_loss=1.0522 long_acc=0.423 | lr=0.00019 mem=792.3MB time=3.2s
+[Epoch 24/30] train_loss=0.9856 val_loss=0.9974 val_acc=0.461 | long_val_loss=1.0518 long_acc=0.414 | lr=0.00014 mem=808.5MB time=3.1s
+[Epoch 25/30] train_loss=1.0023 val_loss=0.9959 val_acc=0.466 | long_val_loss=1.0506 long_acc=0.412 | lr=0.00010 mem=730.7MB time=3.1s
+[Epoch 26/30] train_loss=0.9914 val_loss=0.9975 val_acc=0.451 | long_val_loss=1.0503 long_acc=0.421 | lr=0.00006 mem=730.6MB time=3.5s
+[Epoch 27/30] train_loss=0.9871 val_loss=0.9960 val_acc=0.465 | long_val_loss=1.0497 long_acc=0.416 | lr=0.00004 mem=738.4MB time=3.3s
+[Epoch 28/30] train_loss=0.9924 val_loss=0.9954 val_acc=0.464 | long_val_loss=1.0497 long_acc=0.416 | lr=0.00002 mem=808.5MB time=3.6s
+[Epoch 29/30] train_loss=0.9822 val_loss=0.9955 val_acc=0.468 | long_val_loss=1.0496 long_acc=0.417 | lr=0.00000 mem=855.4MB time=3.8s
+[Epoch 30/30] train_loss=0.9901 val_loss=0.9958 val_acc=0.465 | long_val_loss=1.0496 long_acc=0.419 | lr=0.00000 mem=730.7MB time=3.4s
+Training done transformer: total_time 93.3s final_mem 730.7MB peak?
+Per-task metrics for transformer:
+  parity: loss=0.5428 acc=0.615
+  s3: loss=1.5710 acc=0.265
+  mqar: loss=0.9369 acc=0.500
+  parity_long: loss=0.6174 acc=0.558
+  s3_long: loss=1.6821 acc=0.210
+  mqar_long: loss=1.0742 acc=0.497
+
+============================================================
+TRAINING ROGM - config {'d_model': 64, 'n_layers': 2, 'batch_size': 32, 'seq_len': 32, 'max_len': 64, 'lr': 0.0015, 'epochs': 30, 'num_batches_per_epoch': 200, 'weight_decay': 0.01}
+============================================================
+Model rogm params: 101632
+Initial memory: 761.6 MB
+[Epoch 01/30] train_loss=1.0181 val_loss=0.8108 val_acc=0.629 | long_val_loss=0.8253 long_acc=0.616 | lr=0.00150 mem=932.2MB time=20.4s
+[Epoch 02/30] train_loss=0.6668 val_loss=0.4997 val_acc=0.786 | long_val_loss=0.7806 long_acc=0.686 | lr=0.00148 mem=947.9MB time=20.1s
+[Epoch 03/30] train_loss=0.2835 val_loss=0.2411 val_acc=0.901 | long_val_loss=0.3157 long_acc=0.868 | lr=0.00146 mem=845.5MB time=22.6s
+[Epoch 04/30] train_loss=0.1711 val_loss=0.1916 val_acc=0.926 | long_val_loss=0.4674 long_acc=0.864 | lr=0.00144 mem=874.7MB time=25.1s
+[Epoch 05/30] train_loss=0.1439 val_loss=0.2256 val_acc=0.923 | long_val_loss=0.3929 long_acc=0.838 | lr=0.00140 mem=883.2MB time=24.7s
+[Epoch 06/30] train_loss=0.1109 val_loss=0.0705 val_acc=0.963 | long_val_loss=0.1112 long_acc=0.956 | lr=0.00136 mem=828.9MB time=22.0s
+[Epoch 07/30] train_loss=0.0928 val_loss=0.0729 val_acc=0.963 | long_val_loss=0.1787 long_acc=0.923 | lr=0.00131 mem=863.0MB time=20.4s
+[Epoch 08/30] train_loss=0.1072 val_loss=0.2373 val_acc=0.918 | long_val_loss=0.4380 long_acc=0.872 | lr=0.00125 mem=989.2MB time=18.7s
+[Epoch 09/30] train_loss=0.0948 val_loss=0.0716 val_acc=0.965 | long_val_loss=0.1857 long_acc=0.923 | lr=0.00119 mem=996.9MB time=20.4s
+[Epoch 10/30] train_loss=0.0806 val_loss=0.0723 val_acc=0.964 | long_val_loss=0.1581 long_acc=0.936 | lr=0.00113 mem=1028.1MB time=21.7s
+[Epoch 11/30] train_loss=0.0837 val_loss=0.0665 val_acc=0.968 | long_val_loss=0.1363 long_acc=0.946 | lr=0.00106 mem=860.9MB time=21.3s
+[Epoch 12/30] train_loss=0.0730 val_loss=0.0593 val_acc=0.971 | long_val_loss=0.0731 long_acc=0.973 | lr=0.00098 mem=845.1MB time=19.1s
+[Epoch 13/30] train_loss=0.0625 val_loss=0.0535 val_acc=0.974 | long_val_loss=0.2163 long_acc=0.930 | lr=0.00091 mem=957.1MB time=19.5s
+[Epoch 14/30] train_loss=0.0592 val_loss=0.0550 val_acc=0.972 | long_val_loss=0.1763 long_acc=0.925 | lr=0.00083 mem=855.4MB time=19.6s
+[Epoch 15/30] train_loss=0.0580 val_loss=0.0517 val_acc=0.975 | long_val_loss=0.2240 long_acc=0.899 | lr=0.00075 mem=1010.0MB time=18.4s
+[Epoch 16/30] train_loss=0.0611 val_loss=0.0518 val_acc=0.974 | long_val_loss=0.2569 long_acc=0.887 | lr=0.00067 mem=844.5MB time=18.3s
+[Epoch 17/30] train_loss=0.0618 val_loss=0.1033 val_acc=0.962 | long_val_loss=0.2355 long_acc=0.928 | lr=0.00059 mem=984.1MB time=18.1s
+[Epoch 18/30] train_loss=0.0633 val_loss=0.0507 val_acc=0.977 | long_val_loss=0.1447 long_acc=0.945 | lr=0.00052 mem=921.6MB time=20.0s
+[Epoch 19/30] train_loss=0.0568 val_loss=0.0472 val_acc=0.977 | long_val_loss=0.1372 long_acc=0.955 | lr=0.00044 mem=921.6MB time=20.1s
+[Epoch 20/30] train_loss=0.0499 val_loss=0.0464 val_acc=0.978 | long_val_loss=0.1570 long_acc=0.941 | lr=0.00038 mem=897.8MB time=19.9s
+[Epoch 21/30] train_loss=0.0488 val_loss=0.0448 val_acc=0.979 | long_val_loss=0.1632 long_acc=0.933 | lr=0.00031 mem=906.3MB time=20.8s
+[Epoch 22/30] train_loss=0.0519 val_loss=0.0439 val_acc=0.979 | long_val_loss=0.1798 long_acc=0.937 | lr=0.00025 mem=881.0MB time=19.8s
+[Epoch 23/30] train_loss=0.0502 val_loss=0.0445 val_acc=0.978 | long_val_loss=0.2959 long_acc=0.883 | lr=0.00019 mem=850.8MB time=21.3s
+[Epoch 24/30] train_loss=0.0484 val_loss=0.0432 val_acc=0.980 | long_val_loss=0.2892 long_acc=0.883 | lr=0.00014 mem=866.5MB time=18.9s
+[Epoch 25/30] train_loss=0.0479 val_loss=0.0435 val_acc=0.979 | long_val_loss=0.2506 long_acc=0.888 | lr=0.00010 mem=866.4MB time=18.7s
+[Epoch 26/30] train_loss=0.0476 val_loss=0.0435 val_acc=0.979 | long_val_loss=0.2248 long_acc=0.901 | lr=0.00006 mem=888.4MB time=19.4s
+[Epoch 27/30] train_loss=0.0483 val_loss=0.0434 val_acc=0.979 | long_val_loss=0.2190 long_acc=0.904 | lr=0.00004 mem=927.5MB time=20.2s
+[Epoch 28/30] train_loss=0.0488 val_loss=0.0432 val_acc=0.979 | long_val_loss=0.2258 long_acc=0.902 | lr=0.00002 mem=1005.1MB time=20.2s
+[Epoch 29/30] train_loss=0.0505 val_loss=0.0432 val_acc=0.979 | long_val_loss=0.2316 long_acc=0.899 | lr=0.00000 mem=835.2MB time=21.5s
+[Epoch 30/30] train_loss=0.0503 val_loss=0.0430 val_acc=0.979 | long_val_loss=0.2316 long_acc=0.899 | lr=0.00000 mem=838.4MB time=18.6s
+Training done rogm: total_time 610.0s final_mem 838.4MB peak?
+Per-task metrics for rogm:
+  parity: loss=0.0000 acc=1.000
+  s3: loss=0.0000 acc=1.000
+  mqar: loss=0.9637 acc=0.507
+  parity_long: loss=0.1310 acc=0.921
+  s3_long: loss=0.2735 acc=0.899
+  mqar_long: loss=1.5730 acc=0.463
+
+================================================================================
+COMPARISON SUMMARY
+================================================================================
+
+TRANSFORMER:
+  Params: 73216
+  Final Train Loss: 0.9901
+  Final Val Loss: 0.9958 acc 0.465
+  Final Long Val Loss: 1.0496 acc 0.419
+  Per-task:
+    parity       loss 0.5428 acc 0.615
+    s3           loss 1.5710 acc 0.265
+    mqar         loss 0.9369 acc 0.500
+    parity_long  loss 0.6174 acc 0.558
+    s3_long      loss 1.6821 acc 0.210
+    mqar_long    loss 1.0742 acc 0.497
+  Time 93.3s Mem 730.7MB
+
+ROGM:
+  Params: 101632
+  Final Train Loss: 0.0503
+  Final Val Loss: 0.0430 acc 0.979
+  Final Long Val Loss: 0.2316 acc 0.899
+  Per-task:
+    parity       loss 0.0000 acc 1.000
+    s3           loss 0.0000 acc 1.000
+    mqar         loss 0.9637 acc 0.507
+    parity_long  loss 0.1310 acc 0.921
+    s3_long      loss 0.2735 acc 0.899
+    mqar_long    loss 1.5730 acc 0.463
+  Time 610.0s Mem 838.4MB
+
+DELTA (ROGM - Transformer)  Positive means ROGM better for acc, lower for loss:
+  Val Acc delta: +0.514
+  Long Val Acc delta: +0.480
+  Val Loss delta: -0.9527 (negative is better)
+  parity: acc delta +0.385 loss delta -0.5428
+  s3: acc delta +0.735 loss delta -1.5710
+  mqar: acc delta +0.007 loss delta +0.0268
+  parity_long: acc delta +0.364 loss delta -0.4865
+  s3_long: acc delta +0.690 loss delta -1.4086
+  mqar_long: acc delta -0.035 loss delta +0.4988
+
+EVALUATION:
+  Reasoning wins (out of 4): 4/4 (need >=2)
+  MQAR not catastrophically worse: True
+  Long generalization win: True
+  => ROGM SUCCESS? True
+  >>> Novel architecture exhibits superior reasoning/generalization curves vs baseline micro-transformer. Ready to optimize further / harder tasks.
+Logs saved to logs/comparison_2026-09-17T04-38-01.946089.json
