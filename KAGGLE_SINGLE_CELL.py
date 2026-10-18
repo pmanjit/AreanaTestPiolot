@@ -22,8 +22,8 @@ WORK = Path("/kaggle/working") if Path("/kaggle/working").exists() else Path("."
 SCRIPT = WORK / "z_image_turbo_test.py"
 BRANCH = "arena/83149951-areanatestpiolot"
 RAW_URL = f"https://raw.githubusercontent.com/pmanjit/AreanaTestPiolot/{BRANCH}/z_image_turbo_test.py"
-# Immutable alternative (exact commit 3d0e4afe...):
-# RAW_URL = "https://raw.githubusercontent.com/pmanjit/AreanaTestPiolot/3d0e4afe439ac794574cc9b6a063ce5981a5f5e2/z_image_turbo_test.py"
+# (loads the latest committed script on that branch on every run; to pin an
+#  immutable version, replace {BRANCH} with a full 40-char commit SHA)
 
 NUM_IMAGES = "4"   # <-- set "1" for the quickest smoke test
 
