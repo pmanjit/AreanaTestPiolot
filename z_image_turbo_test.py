@@ -36,8 +36,11 @@ KAGGLE SETUP (one time, ~3-5 min)
    (This test uses ONE GPU only; the 2nd GPU matters later for batching.)
 3. Add this file:  Add Input -> Upload -> upload z_image_turbo_test.py
    (or just import/upload the companion .ipynb notebook instead of this file)
-4. Cell 1 (install — ZImagePipeline only exists in recent diffusers):
+4. Cell 1 (install — ZImagePipeline only exists in recent diffusers;
+   diffusers>=0.41 also needs torchao>=0.15 if torchao is installed —
+   Kaggle bundles torchao 0.14.x, hence the second line):
        !pip install -q --upgrade "git+https://github.com/huggingface/diffusers.git" sdnq
+       !pip install -q --upgrade --no-deps "torchao>=0.15.0"
 5. Cell 2 (run — adjust the path to where you uploaded the file):
        !python /kaggle/input/<your-dataset>/z_image_turbo_test.py
    First run downloads ~10-12 GB of weights. Images land in
@@ -118,14 +121,51 @@ def pick_model_mode(args, torch):
     return "original" if major >= 8 else "int8"
 
 
+def _pkg_version(name):
+    from importlib import metadata
+
+    try:
+        return metadata.version(name)
+    except Exception:
+        return "not installed"
+
+
+def _patch_torchao_fqn_to_config():
+    """diffusers >=0.41 unconditionally imports `FqnToConfig` from torchao
+    when torchao is installed, but that name only exists in torchao >=0.15
+    (0.13/0.14 call the same class `ModuleFqnToConfig`). Kaggle bundles
+    torchao 0.14.x, which breaks `from diffusers import ZImagePipeline`
+    with: ImportError: cannot import name 'FqnToConfig'.
+
+    We never use torchao quantization (SDNQ does our INT8), so aliasing the
+    old name to the new one — exactly what torchao 0.15 itself does in
+    reverse — is sufficient to let diffusers import. No-op if torchao is
+    absent or already >=0.15.
+    """
+    try:
+        import torchao.quantization as _q
+    except Exception:
+        return False
+    if not hasattr(_q, "FqnToConfig") and hasattr(_q, "ModuleFqnToConfig"):
+        _q.FqnToConfig = _q.ModuleFqnToConfig
+        print(f"[compat] torchao {_pkg_version('torchao')} (<0.15) detected: "
+              "aliased ModuleFqnToConfig -> FqnToConfig")
+        return True
+    return False
+
+
 def load_pipe(mode, args, torch):
+    _patch_torchao_fqn_to_config()
     try:
         from diffusers import ZImagePipeline
     except ImportError as e:
         raise ImportError(
-            "ZImagePipeline not found — your diffusers is too old. Run:\n"
-            '  pip install --upgrade "git+https://github.com/huggingface/diffusers.git" sdnq\n'
-            "then restart the Kaggle session and try again."
+            "Failed to import ZImagePipeline. Fixes, in order:\n"
+            '  1) pip install --upgrade "git+https://github.com/huggingface/diffusers.git" sdnq\n'
+            '  2) pip install --upgrade --no-deps "torchao>=0.15.0"   # fixes FqnToConfig error\n'
+            "     (or: pip uninstall -y torchao — the SDNQ path does not use it)\n"
+            "  3) restart the Kaggle session and try again.\n"
+            f"Original error: {e}"
         ) from e
 
     repo = MODEL_REPOS[mode]
@@ -236,6 +276,10 @@ def main():
     print(f"[gpu] {gpu_name} | compute {cc[0]}.{cc[1]} | {total_gb:.1f} GB | "
           f"visible GPUs: {torch.cuda.device_count()} (using cuda:{args.gpu} only)")
     print(f"[torch] {torch.__version__} | cuda {torch.version.cuda}")
+    print("[versions] " + " | ".join(
+        f"{p}={_pkg_version(p)}"
+        for p in ("diffusers", "transformers", "accelerate", "torchao", "sdnq")
+    ))
 
     mode = pick_model_mode(args, torch)
     print(f"[config] model mode = {mode}  ({MODEL_REPOS[mode]})")
